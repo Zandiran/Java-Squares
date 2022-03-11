@@ -1,53 +1,57 @@
 package ru.netology.sqr;
 
 import org.junit.jupiter.api.Test;
-import ru.netology.sQrRService;
+import ru.netology.SqrService;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SQRServiceTest {
-    sQrRService sqrRService = new sQrRService();
+public class SqrServiceTest {
+    SqrService sqrRService = new SqrService();
+
     @Test
-   void smallNumbers () {
+    void smallNumbers() {
 
-      int top = 30;
-      int bot = 10;
-      int expected = 0;
+        int top = 30;
+        int bot = 10;
+        int expected = 0;
 
-      int actual = sqrRService.Numbers(top, bot);
+        int actual = sqrRService.numbers(top, bot);
 
-      assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
+
     @Test
-    void hugeNumbers () {
+    void HugeNumbers() {
 
         int top = 3000;
         int bot = 1000;
         int expected = 23;
 
-        int actual = sqrRService.Numbers(top, bot);
+        int actual = sqrRService.numbers(top, bot);
 
         assertEquals(expected, actual);
     }
+
     @Test
-    void smallGap () {
+    void SmallGap() {
 
         int top = 111;
         int bot = 100;
         int expected = 1;
 
-        int actual = sqrRService.Numbers(top, bot);
+        int actual = sqrRService.numbers(top, bot);
 
         assertEquals(expected, actual);
     }
+
     @Test
-    void hugeGap () {
+    void HugeGap() {
 
         int top = 5000;
         int bot = 100;
         int expected = 61;
 
-        int actual = sqrRService.Numbers(top, bot);
+        int actual = sqrRService.numbers(top, bot);
 
         assertEquals(expected, actual);
     }
